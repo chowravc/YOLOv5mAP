@@ -6,7 +6,7 @@ def main():
 
 	for file in files:
 
-		fileName = file.split('\\')[-1]
+		fileName = file.split('\\')[-1][:-3] + 'txt'
 
 		outFile = './mAP/input/ground-truth/' + fileName
 
