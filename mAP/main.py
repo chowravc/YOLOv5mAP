@@ -9,7 +9,7 @@ import math
 
 import numpy as np
 
-MINOVERLAP = 0.5 # default value (defined in the PASCAL VOC2012 challenge)
+MINOVERLAP = 0 # default value (defined in the PASCAL VOC2012 challenge)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-na', '--no-animation', help="no animation is shown.", action="store_true")
@@ -574,7 +574,7 @@ with open(output_files_path + "/output.txt", 'w') as output_file:
                 if class_name in specific_iou_classes:
                     index = specific_iou_classes.index(class_name)
                     min_overlap = float(iou_list[index])
-            if ovmax >= min_overlap:
+            if ovmax > min_overlap:
                 if "difficult" not in gt_match:
                         if not bool(gt_match["used"]):
                             # true positive
