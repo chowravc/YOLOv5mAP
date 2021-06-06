@@ -42,9 +42,9 @@ def main():
 				semiH = int(inH*dims[0]/2)
 
 				left = str(XC - semiW)
-				top = str(YC + semiH)
+				top = str(YC - semiH)
 				right = str(XC + semiW)
-				bottom = str(YC - semiH)
+				bottom = str(YC + semiH)
 
 				outLine = inClass + ' ' + left + ' ' + top + ' ' + right + ' ' + bottom + '\n'
 				writeFile.write(outLine)
